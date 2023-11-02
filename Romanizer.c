@@ -162,10 +162,11 @@ char *romanize(int number)
 
 int main()
 {
-    int num;
-    scanf("%d", &num);
-    char *romanString = romanize(num);
-    printf("%s", romanString);
-    free(romanString);
+    for (int i = 0; i < 4000; i++)
+    {
+        char *romanString = romanize(i);
+        printf("%s\n", romanString);
+        free(romanString);
+    }
     return 0;
 }
